@@ -1,0 +1,14 @@
+jaffle_shop:
+
+  outputs:
+
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: "{{ env_var('DB_USER') }}"
+      password: "{{ env_var('DB_PASSWORD') }}"
+      database: dev
+      schema: jaffle_shop
+
+  target: dev
